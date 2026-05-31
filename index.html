@@ -1,4 +1,4 @@
-[00:25, 31/05/2026] Amor 💓: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -9,186 +9,213 @@
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
 
 body{
-    background:#050816;
-    color:white;
+background:#050816;
+color:white;
 }
 
 /* HERO */
 
 .hero{
-    background:
-    linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)),
-    url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1600');
-    background-size:cover;
-    background-position:center;
-    padding:120px 20px;
-    text-align:center;
+height:90vh;
+background:
+linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
+url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1600');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
 }
 
 .hero h1{
-    font-size:65px;
-    color:#22c55e;
-    margin-bottom:20px;
+font-size:80px;
+color:#22c55e;
+margin-bottom:20px;
 }
 
 .hero p{
-    font-size:22px;
-    color:#ddd;
-    max-width:700px;
-    margin:auto;
-  …
-[00:30, 31/05/2026] Amor 💓: <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AlbaMix Sports</title>
-
-<style>
-
-body{
-margin:0;
-font-family:Arial;
-background:#07132a;
-color:white;
-}
-
-.topo{
-text-align:center;
-padding:60px 20px;
-background:#08101f;
-}
-
-.topo h1{
-font-size:60px;
-color:#22c55e;
-margin-bottom:10px;
-}
-
-.topo p{
-font-size:22px;
+font-size:25px;
+line-height:1.6;
 color:#ddd;
+margin-bottom:35px;
 }
 
-.botoes{
-margin-top:30px;
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
 }
 
-.botoes a{
+.buttons a{
 text-decoration:none;
-padding:15px 35px;
-border-radius:10px;
-margin:10px;
-display:inline-block;
+padding:18px 40px;
+border-radius:12px;
+font-size:20px;
 font-weight:bold;
+transition:.3s;
 color:white;
 }
 
-.whats{
+.whatsapp{
 background:#22c55e;
 }
 
-.insta{
+.instagram{
 background:#e1306c;
 }
 
-.historia{
-max-width:1000px;
+.buttons a:hover{
+transform:translateY(-5px);
+}
+
+/* SOBRE */
+
+.sobre{
+max-width:1200px;
 margin:auto;
-padding:50px 20px;
+padding:100px 30px;
 text-align:center;
 }
 
-.historia h2{
-font-size:40px;
+.sobre h2{
+font-size:50px;
+margin-bottom:30px;
 color:#22c55e;
 }
 
-.historia p{
-font-size:20px;
-line-height:1.7;
-color:#ddd;
+.sobre p{
+font-size:22px;
+line-height:1.9;
+color:#d6d6d6;
 }
 
+/* CATÁLOGO */
+
 .catalogo{
-padding:30px;
+padding:20px 30px 100px;
 }
 
 .catalogo h2{
 text-align:center;
-font-size:45px;
-margin-bottom:40px;
+font-size:55px;
+margin-bottom:60px;
 color:#22c55e;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
+max-width:1500px;
+margin:auto;
 }
 
 .card{
 background:#0f172a;
-border-radius:20px;
+border-radius:22px;
 overflow:hidden;
-box-shadow:0 0 15px rgba(0,0,0,0.5);
-transition:0.3s;
+transition:.3s;
+box-shadow:0 0 20px rgba(0,0,0,.4);
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(34,197,94,.3);
 }
 
 .card img{
 width:100%;
-height:320px;
+height:380px;
 object-fit:cover;
 background:white;
 }
 
 .info{
-padding:20px;
+padding:25px;
 }
 
 .info h3{
-font-size:28px;
-margin:0 0 10px;
+font-size:30px;
+margin-bottom:15px;
 }
 
 .preco{
-color:#22c55e;
-font-size:30px;
+font-size:34px;
 font-weight:bold;
+color:#22c55e;
 margin-bottom:20px;
 }
 
 .botao{
 display:block;
-background:#22c55e;
+width:100%;
+padding:16px;
 text-align:center;
-padding:14px;
-border-radius:10px;
-font-weight:bold;
 text-decoration:none;
+background:#22c55e;
 color:white;
-}
-
-@media(max-width:700px){
-
-.topo h1{
-font-size:40px;
-}
-
-.topo p{
+border-radius:12px;
 font-size:18px;
+font-weight:bold;
+transition:.3s;
+}
+
+.botao:hover{
+background:#16a34a;
+}
+
+/* RODAPÉ */
+
+footer{
+padding:40px;
+text-align:center;
+background:#08101f;
+color:#aaa;
+font-size:18px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.hero{
+height:auto;
+padding:100px 20px;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.sobre h2,
+.catalogo h2{
+font-size:38px;
+}
+
+.sobre p{
+font-size:18px;
+}
+
+.card img{
+height:320px;
 }
 
 }
@@ -198,23 +225,28 @@ font-size:18px;
 
 <body>
 
-<div class="topo">
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
 
 <h1>AlbaMix Sports</h1>
 
 <p>
-Camisas importadas premium para apaixonados por futebol
+Camisas importadas premium para apaixonados por futebol.
+Qualidade, exclusividade e estilo para verdadeiros torcedores.
 </p>
 
-<div class="botoes">
+<div class="buttons">
 
-<a class="whats"
+<a class="whatsapp"
 href="https://wa.me/5531992315056"
 target="_blank">
 WhatsApp
 </a>
 
-<a class="insta"
+<a class="instagram"
 href="https://instagram.com/albamixsports"
 target="_blank">
 Instagram
@@ -224,18 +256,25 @@ Instagram
 
 </div>
 
-<div class="historia">
+</section>
+
+<!-- SOBRE -->
+
+<section class="sobre">
 
 <h2>Nossa História</h2>
 
 <p>
 A AlbaMix Sports nasceu da paixão pelo futebol e do desejo de entregar camisas premium para verdadeiros torcedores.
-Trabalhamos com modelos importados de alta qualidade, trazendo conforto, estilo e exclusividade.
+Trabalhamos com modelos importados de alta qualidade, oferecendo conforto, estilo e exclusividade.
+Cada peça representa a paixão pelo esporte e o orgulho de vestir grandes clubes e seleções do mundo.
 </p>
 
-</div>
+</section>
 
-<div class="catalogo">
+<!-- CATÁLOGO -->
+
+<section class="catalogo">
 
 <h2>Catálogo Premium</h2>
 
@@ -333,7 +372,13 @@ Trabalhamos com modelos importados de alta qualidade, trazendo conforto, estilo 
 
 </div>
 
-</div>
+</section>
+
+<footer>
+
+© 2026 AlbaMix Sports — Todos os direitos reservados.
+
+</footer>
 
 </body>
 </html>
