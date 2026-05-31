@@ -1,572 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AlbaMix Sports</title>
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
-
-body{
-background:#050816;
-color:white;
-}
-
-/* HERO */
-
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
-url('https://images.unsplash.com/photo-1552667466-07770ae110d0?q=80&w=1600');
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-.hero-content{
-max-width:900px;
-}
-
-.badge{
-display:inline-block;
-background:#22c55e;
-color:white;
-padding:10px 20px;
-border-radius:50px;
-font-weight:bold;
-margin-bottom:25px;
-font-size:16px;
-}
-
-.hero h1{
-font-size:85px;
-margin-bottom:20px;
-font-weight:900;
-line-height:1;
-}
-
-.hero h1 span{
-color:#22c55e;
-}
-
-.hero p{
-font-size:24px;
-color:#ddd;
-line-height:1.7;
-margin-bottom:40px;
-}
-
-.buttons{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.buttons a{
-text-decoration:none;
-padding:18px 38px;
-border-radius:12px;
-font-size:18px;
-font-weight:bold;
-transition:.3s;
-color:white;
-}
-
-.whatsapp{
-background:#22c55e;
-}
-
-.instagram{
-background:#e1306c;
-}
-
-.buttons a:hover{
-transform:translateY(-5px);
-}
-
-/* BENEFÍCIOS */
-
-.beneficios{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-max-width:1400px;
-margin:auto;
-padding:80px 30px;
-}
-
-.beneficio{
-background:#0f172a;
-padding:35px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 0 20px rgba(0,0,0,.4);
-}
-
-.beneficio h3{
-font-size:26px;
-margin-bottom:15px;
-color:#22c55e;
-}
-
-.beneficio p{
-color:#ccc;
-line-height:1.7;
-}
-
-/* SOBRE */
-
-.sobre{
-max-width:1200px;
-margin:auto;
-padding:20px 30px 100px;
-text-align:center;
-}
-
-.sobre h2{
-font-size:55px;
-margin-bottom:30px;
-}
-
-.sobre p{
-font-size:22px;
-line-height:1.9;
-color:#d6d6d6;
-}
-
-/* CATÁLOGO */
-
-.catalogo{
-padding:20px 30px 100px;
-}
-
-.catalogo h2{
-text-align:center;
-font-size:60px;
-margin-bottom:60px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:35px;
-max-width:1500px;
-margin:auto;
-}
-
-.card{
-background:#0f172a;
-border-radius:25px;
-overflow:hidden;
-transition:.3s;
-box-shadow:0 0 20px rgba(0,0,0,.5);
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 35px rgba(34,197,94,.35);
-}
-
-.card img{
-width:100%;
-height:340px;
-object-fit:contain;
-background:white;
-padding:20px;
-}
-
-.info{
-padding:25px;
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-.info h3{
-font-size:30px;
-}
-
-.preco{
-font-size:34px;
-font-weight:bold;
-color:#22c55e;
-}
-
-.pagamento{
-font-size:16px;
-color:#bbb;
-line-height:1.6;
-}
-
-.botao{
-display:block;
-width:100%;
-padding:17px;
-text-align:center;
-text-decoration:none;
-background:#22c55e;
-color:white;
-border-radius:12px;
-font-size:18px;
-font-weight:bold;
-transition:.3s;
-}
-
-.botao:hover{
-background:#16a34a;
-}
-
-/* RODAPÉ */
-
-footer{
-background:#08101f;
-padding:50px 20px;
-text-align:center;
-}
-
-footer h3{
-font-size:35px;
-margin-bottom:15px;
-}
-
-footer p{
-color:#aaa;
-line-height:1.8;
-}
-
-/* RESPONSIVO */
-
-@media(max-width:768px){
-
-.hero{
-height:auto;
-padding:120px 20px;
-}
-
-.hero h1{
-font-size:50px;
-}
-
-.hero p{
-font-size:19px;
-}
-
-.catalogo h2,
-.sobre h2{
-font-size:40px;
-}
-
-.sobre p{
-font-size:18px;
-}
-
-.card img{
-height:300px;
-}
-
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles/index.css">
+    <title>AlbaMix Sports</title>
 </head>
-
 <body>
 
 <!-- HERO -->
-
 <section class="hero">
-
-<div class="hero-content">
-
-<div class="badge">
-🔥 CAMISAS IMPORTADAS PREMIUM
-</div>
-
-<h1>
-Seja Bem-vindo à <span>AlbaMix Sports</span>
-</h1>
-
-<p>
-As camisas mais desejadas do futebol mundial.
-Qualidade premium, exclusividade e estilo para verdadeiros apaixonados pelo esporte.
-</p>
-
-<div class="buttons">
-
-<a class="whatsapp"
-href="https://wa.me/5531992315056"
-target="_blank">
-WhatsApp
-</a>
-
-<a class="instagram"
-href="https://instagram.com/albamixsports"
-target="_blank">
-Instagram
-</a>
-
-</div>
-
-</div>
-
+    <div class="hero-content">
+        <div class="badge">🔥 CAMISAS IMPORTADAS PREMIUM </div>
+        
+        <h1> Seja Bem-vindo à <span>AlbaMix Sports</span></h1>
+        <p>As camisas mais desejadas do futebol mundial. Qualidade premium, exclusividade e estilo para verdadeiros apaixonados pelo esporte.</p>
+        
+        <div class="buttons">
+            <a class="whatsapp" href="https://wa.me/5531992315056" target="_blank">WhatsApp</a>
+            <a class="instagram" href="https://instagram.com/albamixsports" target="_blank">Instagram</a>
+        </div>
+    </div>
 </section>
 
 <!-- BENEFÍCIOS -->
-
 <section class="beneficios">
-
-<div class="beneficio">
-<h3>⚡ Envio Rápido</h3>
-<p>
-Despachamos rapidamente para todo Brasil com segurança.
-</p>
-</div>
-
-<div class="beneficio">
-<h3>💳 Parcelamento</h3>
-<p>
-Parcele em até 12x no cartão de crédito.
-</p>
-</div>
-
-<div class="beneficio">
-<h3>🏆 Qualidade Premium</h3>
-<p>
-Camisas importadas com acabamento premium e excelente qualidade.
-</p>
-</div>
-
-<div class="beneficio">
-<h3>🔥 Modelos Exclusivos</h3>
-<p>
-Os lançamentos mais desejados do futebol mundial.
-</p>
-</div>
-
+    <div class="beneficio">
+        <h3>⚡ Envio Rápido</h3>
+        <p>Despachamos rapidamente para todo Brasil com segurança.</p>
+    </div>
+    <div class="beneficio">
+        <h3>💳 Parcelamento</h3>
+        <p>Parcele em até 12x no cartão de crédito.</p>
+    </div>
+    <div class="beneficio">
+        <h3>🏆 Qualidade Premium</h3>
+        <p>Camisas importadas com acabamento premium e excelente qualidade.</p>
+    </div>
+    <div class="beneficio">
+        <h3>🔥 Modelos Exclusivos</h3>
+        <p>Os lançamentos mais desejados do futebol mundial.</p>
+    </div>
 </section>
 
 <!-- SOBRE -->
-
 <section class="sobre">
-
-<h2>Nossa História</h2>
-
-<p>
-A AlbaMix Sports nasceu da paixão pelo futebol e do desejo de entregar camisas premium para verdadeiros torcedores.
-Trabalhamos com modelos importados de alta qualidade, trazendo conforto, estilo e exclusividade para quem vive o esporte intensamente.
-Cada peça representa a paixão pelos maiores clubes e seleções do mundo.
-</p>
-
+    <h2>Nossa História</h2>
+    <p>A AlbaMix Sports nasceu da paixão pelo futebol e do desejo de entregar camisas premium para verdadeiros torcedores.
+        Trabalhamos com modelos importados de alta qualidade, trazendo conforto, estilo e exclusividade para quem vive o esporte intensamente.
+        Cada peça representa a paixão pelos maiores clubes e seleções do mundo.
+    </p>
 </section>
 
 <!-- CATÁLOGO -->
-
 <section class="catalogo">
-
-<h2>Catálogo Premium</h2>
-
-<div class="grid">
-
-<!-- BRASIL -->
-
-<div class="card">
-
-<img src="Brasil 2026.jpeg">
-
-<div class="info">
-
-<h3>Brasil 2026</h3>
-
-<div class="preco">
-R$ 219,90
-</div>
-
-<div class="pagamento">
-ou 12x de R$ 21,99 no cartão
-</div>
-
-<a class="botao"
-href="https://wa.me/5531992315056"
-target="_blank">
-Comprar Agora
-</a>
-
-</div>
-
-</div>
-
-<!-- CRUZEIRO -->
-
-<div class="card">
-
-<img src="Cruzeiro Azul 2026.jpeg">
-
-<div class="info">
-
-<h3>Cruzeiro Azul 2026</h3>
-
-<div class="preco">
-R$ 179,90
-</div>
-
-<div class="pagamento">
-ou 12x de R$ 17,99 no cartão
-</div>
-
-<a class="botao"
-href="https://wa.me/5531992315056"
-target="_blank">
-Comprar Agora
-</a>
-
-</div>
-
-</div>
-
-<!-- FLAMENGO -->
-
-<div class="card">
-
-<img src="Flamengo 2026.jpeg">
-
-<div class="info">
-
-<h3>Flamengo 2026</h3>
-
-<div class="preco">
-R$ 179,90
-</div>
-
-<div class="pagamento">
-ou 12x de R$ 17,99 no cartão
-</div>
-
-<a class="botao"
-href="https://wa.me/5531992315056"
-target="_blank">
-Comprar Agora
-</a>
-
-</div>
-
-</div>
-
-<!-- PSG -->
-
-<div class="card">
-
-<img src="Psg 2026.jpeg">
-
-<div class="info">
-
-<h3>PSG 2026</h3>
-
-<div class="preco">
-R$ 179,90
-</div>
-
-<div class="pagamento">
-ou 12x de R$ 17,99 no cartão
-</div>
-
-<a class="botao"
-href="https://wa.me/5531992315056"
-target="_blank">
-Comprar Agora
-</a>
-
-</div>
-
-</div>
-
-<!-- REAL MADRID -->
-
-<div class="card">
-
-<img src="Real Madrid 2026.jpeg">
-
-<div class="info">
-
-<h3>Real Madrid 2026</h3>
-
-<div class="preco">
-R$ 179,90
-</div>
-
-<div class="pagamento">
-ou 12x de R$ 17,99 no cartão
-</div>
-
-<a class="botao"
-href="https://wa.me/5531992315056"
-target="_blank">
-Comprar Agora
-</a>
-
-</div>
-
-</div>
-
-<!-- BAYERN -->
-
-<div class="card">
-
-<img src="Bayern 2026.jpeg">
-
-<div class="info">
-
-<h3>Bayern 2026</h3>
-
-<div class="preco">
-R$ 179,90
-</div>
-
-<div class="pagamento">
-ou 12x de R$ 17,99 no cartão
-</div>
-
-<a class="botao"
-href="https://wa.me/5531992315056"
-target="_blank">
-Comprar Agora
-</a>
-
-</div>
-
-</div>
-
-</div>
-
+    <h2>Catálogo Premium</h2>
+    <div class="grid">
+        <!-- BRASIL -->
+        <div class="card">
+            <img src="src/images/camisas/Brasil 2026.jpeg">
+            <div class="info">
+                <h3>Brasil 2026</h3>
+                <div class="preco">R$ 219,90</div>
+                <div class="pagamento">ou 12x de R$ 21,99 no cartão</div>
+                <a class="botao" href="https://wa.me/5531992315056" target="_blank">Comprar Agora</a>
+            </div>
+        </div>
+
+        <!-- CRUZEIRO -->
+        <div class="card">
+            <img src="src/images/camisas/Cruzeiro Azul 2026.jpeg">
+            <div class="info">
+                <h3>Cruzeiro Azul 2026</h3>
+                <div class="preco">R$ 179,90</div>
+                <div class="pagamento">ou 12x de R$ 17,99 no cartão</div>
+                <a class="botao" href="https://wa.me/5531992315056" target="_blank">Comprar Agora</a>
+            </div>
+        </div>
+
+        <!-- FLAMENGO -->
+        <div class="card">
+            <img src="src/images/camisas/Flamengo 2026.jpeg">
+            <div class="info">
+                <h3>Flamengo 2026</h3>
+                <div class="preco">R$ 179,90</div>
+                <div class="pagamento">ou 12x de R$ 17,99 no cartão</div>
+                <a class="botao" href="https://wa.me/5531992315056" target="_blank">Comprar Agora</a>
+            </div>
+        </div>
+
+        <!-- PSG -->
+        <div class="card">
+            <img src="src/images/camisas/PSG 2026.jpeg">
+            <div class="info">
+                <h3>PSG 2026</h3>
+                <div class="preco">R$ 179,90</div>
+                <div class="pagamento">ou 12x de R$ 17,99 no cartão</div>
+                <a class="botao" href="https://wa.me/5531992315056"target="_blank">Comprar Agora</a>
+            </div>
+        </div>
+
+        <!-- REAL MADRID -->
+        <div class="card">
+            <img src="src/images/camisas/Real Madrid 2026.jpeg">
+            <div class="info">
+                <h3>Real Madrid 2026</h3>
+                <div class="preco">R$ 179,90</div>
+                <div class="pagamento">ou 12x de R$ 17,99 no cartão</div>
+                <a class="botao" href="https://wa.me/5531992315056" target="_blank">Comprar Agora</a>
+            </div>
+        </div>
+
+        <!-- BAYERN -->
+        <div class="card">
+            <img src="src/images/camisas/Bayern 2026.jpeg">
+            <div class="info">
+                <h3>Bayern 2026</h3>
+                <div class="preco">R$ 179,90</div>
+                <div class="pagamento">ou 12x de R$ 17,99 no cartão</div>
+                <a class="botao" href="https://wa.me/5531992315056" target="_blank">Comprar Agora</a>
+            </div>
+        </div>
+    </div>
 </section>
 
 <footer>
-
-<h3>AlbaMix Sports</h3>
-
-<p>
-© 2026 AlbaMix Sports — Todos os direitos reservados.
-<br><br>
-Instagram: @albamixsports
-</p>
-
-</footer>
-
+    <h3>AlbaMix Sports</h3>
+    <p>© 2026 AlbaMix Sports — Todos os direitos reservados.
+        <br><br>Instagram: @albamixsports</p>
+    </footer>
 </body>
 </html>

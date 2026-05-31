@@ -1,0 +1,266 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#050816;
+    color:white;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
+    url('https://images.unsplash.com/photo-1552667466-07770ae110d0?q=80&w=1600');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.badge{
+    display:inline-block;
+    background:#22c55e;
+    color:white;
+    padding:10px 20px;
+    border-radius:50px;
+    font-weight:bold;
+    margin-bottom:25px;
+    font-size:16px;
+}
+
+.hero h1{
+    font-size:85px;
+    margin-bottom:20px;
+    font-weight:900;
+    line-height:1;
+}
+
+.hero h1 span{
+    color:#22c55e;
+}
+
+.hero p{
+    font-size:24px;
+    color:#ddd;
+    line-height:1.7;
+    margin-bottom:40px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.buttons a{
+    text-decoration:none;
+    padding:18px 38px;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+    color:white;
+}
+
+.whatsapp{
+    background:#22c55e;
+}
+
+.instagram{
+    background:#e1306c;
+}
+
+.buttons a:hover{
+    transform:translateY(-5px);
+}
+
+/* BENEFÍCIOS */
+.beneficios{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    max-width:1400px;
+    margin:auto;
+    padding:80px 30px;
+}
+
+.beneficio{
+    background:#0f172a;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,0,0,.4);
+}
+
+.beneficio h3{
+    font-size:26px;
+    margin-bottom:15px;
+    color:#22c55e;
+}
+
+.beneficio p{
+    color:#ccc;
+    line-height:1.7;
+}
+
+/* SOBRE */
+.sobre{
+    max-width:1200px;
+    margin:auto;
+    padding:20px 30px 100px;
+    text-align:center;
+}
+
+.sobre h2{
+    font-size:55px;
+    margin-bottom:30px;
+}
+
+.sobre p{
+    font-size:22px;
+    line-height:1.9;
+    color:#d6d6d6;
+}
+
+/* CATÁLOGO */
+.catalogo{
+    padding:20px 30px 100px;
+}
+
+.catalogo h2{
+    text-align:center;
+    font-size:60px;
+    margin-bottom:60px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+    max-width:1500px;
+    margin:auto;
+}
+
+.card{
+    background:#0f172a;
+    border-radius:25px;
+    overflow:hidden;
+    transition:.3s;
+    box-shadow:0 0 20px rgba(0,0,0,.5);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 35px rgba(34,197,94,.35);
+}
+
+.card img{
+    width:100%;
+    height:340px;
+    object-fit:contain;
+    background:white;
+    padding:20px;
+}
+
+.info{
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.info h3{
+    font-size:30px;
+}
+
+.preco{
+    font-size:34px;
+    font-weight:bold;
+    color:#22c55e;
+}
+
+.pagamento{
+    font-size:16px;
+    color:#bbb;
+    line-height:1.6;
+}
+
+.botao{
+    display:block;
+    width:100%;
+    padding:17px;
+    text-align:center;
+    text-decoration:none;
+    background:#22c55e;
+    color:white;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.botao:hover{
+    background:#16a34a;
+}
+
+/* RODAPÉ */
+footer{
+    background:#08101f;
+    padding:50px 20px;
+    text-align:center;
+}
+
+footer h3{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+footer p{
+    color:#aaa;
+    line-height:1.8;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+    .hero{
+        height:auto;
+        padding:120px 20px;
+    }
+
+    .hero h1{
+        font-size:50px;
+    }
+
+    .hero p{
+        font-size:19px;
+    }
+
+    .catalogo h2,
+    .sobre h2{
+        font-size:40px;
+    }
+
+    .sobre p{
+        font-size:18px;
+    }
+
+    .card img{
+        height:300px;
+    }
+}
