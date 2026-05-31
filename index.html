@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AlbaMix Sports</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -24,666 +22,466 @@ color:white;
 overflow-x:hidden;
 }
 
-/* BACKGROUND */
-
-.bg{
-position:fixed;
-width:100%;
-height:100%;
-top:0;
-left:0;
-background:
-radial-gradient(circle at top,#10235a 0%,#050816 40%),
-linear-gradient(to bottom,#050816,#02030a);
-z-index:-2;
-}
-
-.glow{
-position:fixed;
-width:500px;
-height:500px;
-border-radius:50%;
-background:#0d6efd33;
-filter:blur(120px);
-top:-150px;
-right:-100px;
-z-index:-1;
-}
-
-/* HEADER */
-
 header{
 position:fixed;
 top:0;
+left:0;
 width:100%;
-background:rgba(5,8,22,.9);
+height:80px;
+background:#050816ee;
 backdrop-filter:blur(10px);
-padding:18px 6%;
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:space-between;
+padding:0 30px;
 z-index:999;
-border-bottom:1px solid rgba(255,255,255,.08);
+border-bottom:1px solid #1f2937;
 }
 
 .logo{
 display:flex;
 align-items:center;
 gap:12px;
+}
+
+.logo img{
+width:55px;
+height:55px;
+border-radius:50%;
+}
+
+.logo h1{
 font-size:24px;
 font-weight:800;
 color:#fff;
 }
 
-.logo img{
-width:48px;
-height:48px;
-border-radius:50%;
-object-fit:cover;
-}
-
-nav{
+.menu{
 display:flex;
 gap:25px;
+align-items:center;
 }
 
-nav a{
+.menu a{
 text-decoration:none;
-color:#d8d8d8;
+color:#fff;
 font-weight:500;
-transition:.3s;
+transition:0.3s;
 }
 
-nav a:hover{
-color:#58ffb5;
+.menu a:hover{
+color:#52ff9e;
 }
 
-.cart-btn{
-background:#58ffb5;
+.cart{
+background:#52ff9e;
 color:#000;
-padding:12px 18px;
-border-radius:12px;
+padding:10px 18px;
+border-radius:30px;
 font-weight:700;
 cursor:pointer;
 }
 
-/* HERO */
-
 .hero{
-padding-top:150px;
+padding-top:130px;
 padding-bottom:80px;
 text-align:center;
-padding-left:6%;
-padding-right:6%;
+background:
+linear-gradient(to bottom,#050816,#09122b);
 }
 
-.badge{
-display:inline-block;
-background:#132a52;
-padding:10px 18px;
-border-radius:999px;
-font-size:14px;
-margin-bottom:20px;
-color:#58ffb5;
-border:1px solid #58ffb555;
-}
-
-.hero h1{
-font-size:72px;
-line-height:1;
+.hero h2{
+font-size:60px;
 font-weight:800;
-margin-bottom:25px;
+line-height:1.1;
+margin-bottom:20px;
 }
 
-.hero h1 span{
-color:#58ffb5;
+.hero span{
+color:#52ff9e;
 }
 
 .hero p{
-max-width:850px;
+max-width:700px;
 margin:auto;
 font-size:20px;
-line-height:1.8;
-color:#cfcfcf;
-margin-bottom:35px;
+opacity:0.8;
+line-height:1.6;
 }
 
-.hero-buttons{
+.buttons{
+margin-top:35px;
 display:flex;
 justify-content:center;
 gap:20px;
 flex-wrap:wrap;
 }
 
-.hero-buttons a{
-text-decoration:none;
-padding:16px 32px;
-border-radius:14px;
+.btn{
+padding:16px 34px;
+border:none;
+border-radius:40px;
+font-size:16px;
 font-weight:700;
-transition:.3s;
+cursor:pointer;
+transition:0.3s;
+text-decoration:none;
 }
 
-.btn-primary{
-background:#58ffb5;
+.btn-whats{
+background:#52ff9e;
 color:#000;
 }
 
-.btn-primary:hover{
-transform:translateY(-4px);
+.btn-whats:hover{
+transform:scale(1.05);
 }
 
-.btn-secondary{
-background:#132a52;
+.btn-instagram{
+background:#ff3ba7;
 color:#fff;
 }
 
-/* BENEFITS */
-
-.benefits{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:25px;
-padding:40px 6%;
+.btn-instagram:hover{
+transform:scale(1.05);
 }
 
-.benefit{
-background:#0d1225;
-padding:30px;
-border-radius:20px;
-border:1px solid rgba(255,255,255,.05);
-transition:.3s;
-}
-
-.benefit:hover{
-transform:translateY(-8px);
-border-color:#58ffb544;
-}
-
-.benefit h3{
-margin-top:15px;
-font-size:22px;
-margin-bottom:10px;
-}
-
-/* PRODUCTS */
-
-.products-section{
-padding:80px 6%;
+.section{
+padding:80px 40px;
+max-width:1400px;
+margin:auto;
 }
 
 .section-title{
-font-size:52px;
-margin-bottom:50px;
+font-size:46px;
 font-weight:800;
+margin-bottom:20px;
 text-align:center;
 }
 
-.products-grid{
+.section-text{
+text-align:center;
+max-width:1000px;
+margin:auto;
+line-height:1.9;
+font-size:18px;
+opacity:0.8;
+}
+
+.categories{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:40px;
+margin-bottom:50px;
+}
+
+.category-btn{
+padding:12px 26px;
+border-radius:30px;
+border:none;
+background:#12192d;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.category-btn:hover,
+.category-btn.active{
+background:#52ff9e;
+color:#000;
+}
+
+.products{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+gap:28px;
 }
 
 .card{
-background:#0c1222;
-border-radius:24px;
+background:#0d1324;
+border-radius:22px;
 overflow:hidden;
+transition:0.3s;
+border:1px solid #182033;
 position:relative;
-transition:.4s;
-border:1px solid rgba(255,255,255,.05);
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 50px rgba(0,0,0,.4);
+transform:translateY(-8px);
+border-color:#52ff9e;
 }
 
 .card img{
 width:100%;
 height:340px;
-object-fit:contain;
-background:#fff;
-padding:20px;
-}
-
-.favorite{
-position:absolute;
-top:15px;
-right:15px;
-width:42px;
-height:42px;
-border-radius:50%;
-background:#ffffff15;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:20px;
-backdrop-filter:blur(5px);
+object-fit:cover;
+background:white;
 }
 
 .card-content{
 padding:22px;
 }
 
-.card-category{
-color:#9e9e9e;
-font-size:14px;
-margin-bottom:6px;
+.card h3{
+font-size:24px;
+margin-bottom:10px;
 }
 
-.card-title{
-font-size:28px;
-font-weight:700;
-margin-bottom:10px;
+.price{
+font-size:32px;
+font-weight:800;
+color:#52ff9e;
+margin-bottom:5px;
+}
+
+.installments{
+font-size:14px;
+opacity:0.7;
+margin-bottom:18px;
 }
 
 .sizes{
 display:flex;
 gap:10px;
-margin:18px 0;
+margin-bottom:20px;
+flex-wrap:wrap;
 }
 
 .size{
-width:45px;
-height:45px;
+width:42px;
+height:42px;
 border-radius:10px;
 display:flex;
 align-items:center;
 justify-content:center;
-background:#111b35;
+border:2px solid #333;
 cursor:pointer;
-transition:.3s;
-border:1px solid transparent;
-}
-
-.size:hover,
-.size.active{
-background:#58ffb5;
-color:#000;
+transition:0.3s;
 font-weight:700;
 }
 
-.price{
-font-size:34px;
-font-weight:800;
-color:#58ffb5;
-margin-top:15px;
-}
-
-.installment{
-color:#ccc;
-margin-top:5px;
-font-size:15px;
+.size.active{
+background:#52ff9e;
+color:#000;
+border-color:#52ff9e;
 }
 
 .buy-btn{
-margin-top:22px;
 width:100%;
-padding:16px;
+padding:15px;
 border:none;
 border-radius:14px;
-background:#58ffb5;
-color:#000;
+background:#52ff9e;
 font-size:17px;
-font-weight:700;
-cursor:pointer;
-transition:.3s;
-}
-
-.buy-btn:hover{
-transform:scale(1.03);
-}
-
-/* CART */
-
-.cart{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#58ffb5;
-color:#000;
-padding:18px 24px;
-border-radius:18px;
 font-weight:800;
-z-index:999;
 cursor:pointer;
-box-shadow:0 15px 35px rgba(0,0,0,.35);
 }
 
-/* FOOTER */
-
-footer{
-padding:80px 6%;
-text-align:center;
-color:#999;
+.cart-panel{
+position:fixed;
+top:0;
+right:-450px;
+width:420px;
+height:100vh;
+background:#0d1324;
+z-index:9999;
+padding:30px;
+transition:0.4s;
+overflow:auto;
 }
 
-/* RESPONSIVE */
+.cart-panel.active{
+right:0;
+}
+
+.cart-title{
+font-size:34px;
+font-weight:800;
+margin-bottom:30px;
+}
+
+.cart-item{
+margin-bottom:25px;
+padding-bottom:20px;
+border-bottom:1px solid #1f2937;
+}
+
+.total{
+font-size:30px;
+font-weight:800;
+margin-top:25px;
+color:#52ff9e;
+}
+
+.checkout{
+margin-top:30px;
+width:100%;
+padding:18px;
+border:none;
+border-radius:14px;
+background:#52ff9e;
+font-size:18px;
+font-weight:800;
+cursor:pointer;
+}
 
 @media(max-width:768px){
 
-.hero h1{
-font-size:48px;
+.hero h2{
+font-size:42px;
 }
 
 .section-title{
-font-size:40px;
+font-size:36px;
 }
 
-nav{
-display:none;
+header{
+padding:0 15px;
+}
+
+.menu{
+gap:10px;
+font-size:14px;
+}
+
+.cart-panel{
+width:100%;
 }
 
 }
 
 </style>
 </head>
-
 <body>
-
-<div class="bg"></div>
-<div class="glow"></div>
 
 <header>
 
 <div class="logo">
-<img src="1000151077.png">
-<span>AlbaMix Sports</span>
+<img src="logo.png">
+<h1>AlbaMix Sports</h1>
 </div>
 
-<nav>
-<a href="#">Início</a>
-<a href="#">Brasileirão</a>
-<a href="#">Europeus</a>
-<a href="#">Seleções</a>
-<a href="#">Promoções</a>
-</nav>
+<div class="menu">
+<a href="#historia">Nossa História</a>
+<a href="#catalogo">Catálogo</a>
+<a href="https://instagram.com/albamixsports" target="_blank">Instagram</a>
 
-<div class="cart-btn">
-🛒 Carrinho
+<div class="cart" onclick="openCart()">
+🛒 <span id="cartCount">0</span>
+</div>
 </div>
 
 </header>
 
 <section class="hero">
 
-<div class="badge">
-🔥 LOJA PREMIUM DE CAMISAS
-</div>
-
-<h1>
-Seja Bem-vindo à <br>
-<span>AlbaMix Sports</span>
-</h1>
+<h2>SEJA BEM-VINDO À <span>ALBAMIX SPORTS</span></h2>
 
 <p>
 As camisas mais desejadas do futebol mundial.
-Qualidade premium, estilo esportivo e experiência profissional para apaixonados por futebol.
+Qualidade premium, estilo esportivo e exclusividade.
 </p>
 
-<div class="hero-buttons">
+<div class="buttons">
 
-<a href="https://wa.me/5531992842223" class="btn-primary">
+<a class="btn btn-whats"
+href="https://wa.me/5531992842223"
+target="_blank">
 WhatsApp
 </a>
 
-<a href="#catalogo" class="btn-secondary">
-Ver Catálogo
+<a class="btn btn-instagram"
+href="https://instagram.com/albamixsports"
+target="_blank">
+Instagram
 </a>
 
 </div>
 
 </section>
 
-<section class="benefits">
+<section class="section" id="historia">
 
-<div class="benefit">
-<h3>⚡ Envio Rápido</h3>
-<p>Entrega para todo Brasil com segurança.</p>
-</div>
+<h2 class="section-title">Nossa História</h2>
 
-<div class="benefit">
-<h3>💳 Parcelamento</h3>
-<p>Parcele em até 3x no cartão.</p>
-</div>
-
-<div class="benefit">
-<h3>🏆 Qualidade Premium</h3>
-<p>Camisas importadas com acabamento premium.</p>
-</div>
-
-<div class="benefit">
-<h3>🔥 Modelos Exclusivos</h3>
-<p>Os lançamentos mais desejados do futebol.</p>
-</div>
+<p class="section-text">
+A AlbaMix Sports nasceu da paixão pelo futebol e pela vontade de trazer
+camisas premium com qualidade, conforto e estilo para verdadeiros torcedores.
+Selecionamos os modelos mais desejados do futebol mundial para oferecer uma experiência única.
+</p>
 
 </section>
 
-<section class="products-section" id="catalogo">
+<section class="section" id="catalogo">
 
-<h2 class="section-title">
-Catálogo Premium
-</h2>
+<h2 class="section-title">Catálogo Premium</h2>
 
-<div class="products-grid">
+<div class="categories">
 
-<!-- BRASIL -->
+<button class="category-btn active">Todos</button>
+<button class="category-btn">Brasileirão</button>
+<button class="category-btn">Europa</button>
+
+</div>
+
+<div class="products">
 
 <div class="card">
-
-<div class="favorite">♡</div>
-
-<img src="Brasil 2026.jpeg">
-
-<div class="card-content">
-
-<div class="card-category">Seleções</div>
-
-<div class="card-title">Brasil 2026</div>
-
-<div class="sizes">
-<div class="size active">P</div>
-<div class="size">M</div>
-<div class="size">G</div>
-<div class="size">GG</div>
-</div>
-
-<div class="price">
-R$ 179,90
-</div>
-
-<div class="installment">
-ou 3x de R$ 59,97
-</div>
-
-<button class="buy-btn"
-onclick="comprar('Brasil 2026')">
-Comprar Agora
-</button>
-
-</div>
-</div>
-
-<!-- CRUZEIRO -->
-
-<div class="card">
-
-<div class="favorite">♡</div>
-
-<img src="Cruzeiro Azul 2026.jpeg">
-
-<div class="card-content">
-
-<div class="card-category">Brasileirão</div>
-
-<div class="card-title">Cruzeiro Azul 2026</div>
-
-<div class="sizes">
-<div class="size active">P</div>
-<div class="size">M</div>
-<div class="size">G</div>
-<div class="size">GG</div>
-</div>
-
-<div class="price">
-R$ 179,90
-</div>
-
-<div class="installment">
-ou 3x de R$ 59,97
-</div>
-
-<button class="buy-btn"
-onclick="comprar('Cruzeiro Azul 2026')">
-Comprar Agora
-</button>
-
-</div>
-</div>
-
-<!-- FLAMENGO -->
-
-<div class="card">
-
-<div class="favorite">♡</div>
 
 <img src="Flamengo 2026.jpeg">
 
 <div class="card-content">
 
-<div class="card-category">Brasileirão</div>
+<h3>Flamengo 2026</h3>
 
-<div class="card-title">Flamengo 2026</div>
+<div class="price">R$ 179,90</div>
+
+<div class="installments">
+3x de R$ 69,90 no cartão
+</div>
 
 <div class="sizes">
-<div class="size active">P</div>
+<div class="size">P</div>
 <div class="size">M</div>
 <div class="size">G</div>
 <div class="size">GG</div>
 </div>
 
-<div class="price">
-R$ 179,90
-</div>
-
-<div class="installment">
-ou 3x de R$ 59,97
-</div>
-
 <button class="buy-btn"
-onclick="comprar('Flamengo 2026')">
-Comprar Agora
+onclick="addToCart('Flamengo 2026',179.90)">
+Comprar
 </button>
 
 </div>
 </div>
 
-<!-- PSG -->
-
 <div class="card">
-
-<div class="favorite">♡</div>
 
 <img src="Psg 2026.jpeg">
 
 <div class="card-content">
 
-<div class="card-category">Europeus</div>
+<h3>PSG 2026</h3>
 
-<div class="card-title">PSG 2026</div>
+<div class="price">R$ 179,90</div>
+
+<div class="installments">
+3x de R$ 69,90 no cartão
+</div>
 
 <div class="sizes">
-<div class="size active">P</div>
+<div class="size">P</div>
 <div class="size">M</div>
 <div class="size">G</div>
 <div class="size">GG</div>
 </div>
 
-<div class="price">
-R$ 179,90
-</div>
-
-<div class="installment">
-ou 3x de R$ 59,97
-</div>
-
 <button class="buy-btn"
-onclick="comprar('PSG 2026')">
-Comprar Agora
-</button>
-
-</div>
-</div>
-
-<!-- BAYERN -->
-
-<div class="card">
-
-<div class="favorite">♡</div>
-
-<img src="Bayern 2026.jpeg">
-
-<div class="card-content">
-
-<div class="card-category">Europeus</div>
-
-<div class="card-title">Bayern 2026</div>
-
-<div class="sizes">
-<div class="size active">P</div>
-<div class="size">M</div>
-<div class="size">G</div>
-<div class="size">GG</div>
-</div>
-
-<div class="price">
-R$ 179,90
-</div>
-
-<div class="installment">
-ou 3x de R$ 59,97
-</div>
-
-<button class="buy-btn"
-onclick="comprar('Bayern 2026')">
-Comprar Agora
-</button>
-
-</div>
-</div>
-
-<!-- REAL -->
-
-<div class="card">
-
-<div class="favorite">♡</div>
-
-<img src="Real Madrid 2026.jpeg">
-
-<div class="card-content">
-
-<div class="card-category">Europeus</div>
-
-<div class="card-title">Real Madrid 2026</div>
-
-<div class="sizes">
-<div class="size active">P</div>
-<div class="size">M</div>
-<div class="size">G</div>
-<div class="size">GG</div>
-</div>
-
-<div class="price">
-R$ 179,90
-</div>
-
-<div class="installment">
-ou 3x de R$ 59,97
-</div>
-
-<button class="buy-btn"
-onclick="comprar('Real Madrid 2026')">
-Comprar Agora
+onclick="addToCart('PSG 2026',179.90)">
+Comprar
 </button>
 
 </div>
@@ -693,37 +491,39 @@ Comprar Agora
 
 </section>
 
-<footer>
+<div class="cart-panel" id="cartPanel">
 
-© 2026 AlbaMix Sports — Todos os direitos reservados.
+<div class="cart-title">
+Seu Carrinho
+</div>
 
-</footer>
+<div id="cartItems"></div>
+
+<div class="total" id="cartTotal">
+Total: R$ 0,00
+</div>
+
+<button class="checkout" onclick="checkoutWhats()">
+Finalizar Pedido
+</button>
+
+</div>
 
 <script>
 
-function comprar(produto){
+let cart = [];
 
-const numero = "5531992842223";
-
-const mensagem =
-Olá! Tenho interesse na camisa ${produto};
-
-const url =
-https://wa.me/${numero}?text=${encodeURIComponent(mensagem)};
-
-window.open(url,'_blank');
-
+function openCart(){
+document.getElementById('cartPanel').classList.toggle('active');
 }
 
-document.querySelectorAll('.sizes').forEach(group=>{
-
-const sizes = group.querySelectorAll('.size');
-
-sizes.forEach(size=>{
+document.querySelectorAll('.size').forEach(size=>{
 
 size.addEventListener('click',()=>{
 
-sizes.forEach(s=>s.classList.remove('active'));
+size.parentElement.querySelectorAll('.size').forEach(s=>{
+s.classList.remove('active');
+});
 
 size.classList.add('active');
 
@@ -731,7 +531,65 @@ size.classList.add('active');
 
 });
 
+function addToCart(name,price){
+
+cart.push({name,price});
+
+updateCart();
+
+openCart();
+
+}
+
+function updateCart(){
+
+const items = document.getElementById('cartItems');
+
+items.innerHTML = '';
+
+let total = 0;
+
+cart.forEach(item=>{
+
+total += item.price;
+
+items.innerHTML += `
+<div class="cart-item">
+<h3>${item.name}</h3>
+<p>R$ ${item.price.toFixed(2)}</p>
+</div>
+`;
+
 });
+
+document.getElementById('cartTotal').innerHTML =
+Total: R$ ${total.toFixed(2)};
+
+document.getElementById('cartCount').innerText =
+cart.length;
+
+}
+
+function checkoutWhats(){
+
+if(cart.length === 0){
+alert('Seu carrinho está vazio!');
+return;
+}
+
+let message = 'Olá! Quero finalizar meu pedido:%0A%0A';
+
+cart.forEach(item=>{
+message += • ${item.name} - R$ ${item.price.toFixed(2)}%0A;
+});
+
+let total = cart.reduce((acc,item)=>acc+item.price,0);
+
+message += %0ATotal: R$ ${total.toFixed(2)};
+
+window.open(https://wa.me/5531992842223?text=${message});
+
+}
 
 </script>
 
