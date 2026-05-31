@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+[00:00, 31/05/2026] Amor 💓: <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -50,16 +50,73 @@ header p{
 }
 
 .social a{
-    text-decoration:none;
-    color:white;
-    padding:15px 30px;
-    border-radius:12px;
-    font-weight:bold;
-    transition:0.3s;
+    text-decoratio…
+[00:25, 31/05/2026] Amor 💓: <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AlbaMix Sports</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
-.social a:hover{
-    transform:scale(1.05);
+body{
+    background:#050816;
+    color:white;
+}
+
+/* HERO */
+
+.hero{
+    background:
+    linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)),
+    url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1600');
+    background-size:cover;
+    background-position:center;
+    padding:120px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:65px;
+    color:#22c55e;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    color:#ddd;
+    max-width:700px;
+    margin:auto;
+    line-height:1.6;
+}
+
+.buttons{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:18px 40px;
+    border:none;
+    border-radius:14px;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+    text-decoration:none;
+    color:white;
 }
 
 .whatsapp{
@@ -70,21 +127,61 @@ header p{
     background:#e1306c;
 }
 
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* HISTÓRIA */
+
+.story{
+    max-width:1100px;
+    margin:80px auto;
+    padding:40px;
+    background:#0f172a;
+    border-radius:25px;
+    text-align:center;
+}
+
+.story h2{
+    font-size:40px;
+    margin-bottom:20px;
+    color:#22c55e;
+}
+
+.story p{
+    color:#ddd;
+    line-height:1.8;
+    font-size:18px;
+}
+
 /* CATÁLOGO */
 
 .catalogo{
+    padding:40px 20px 100px;
+}
+
+.catalogo h2{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:50px;
+    color:#22c55e;
+}
+
+.grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:30px;
-    padding:40px 25px;
+    max-width:1400px;
+    margin:auto;
 }
 
 .card{
-    background:#111827;
+    background:#0f172a;
     border-radius:20px;
     overflow:hidden;
-    box-shadow:0 0 20px rgba(0,0,0,0.4);
-    transition:0.3s;
+    transition:.3s;
+    cursor:pointer;
+    box-shadow:0 0 15px rgba(0,0,0,.4);
 }
 
 .card:hover{
@@ -93,67 +190,115 @@ header p{
 
 .card img{
     width:100%;
-    height:360px;
+    height:350px;
     object-fit:cover;
+    background:white;
 }
 
 .info{
     padding:20px;
 }
 
-.info h2{
-    font-size:24px;
-    margin-bottom:12px;
+.info h3{
+    font-size:28px;
+    margin-bottom:10px;
 }
 
-.preco{
+.price{
     color:#22c55e;
-    font-size:30px;
+    font-size:32px;
     font-weight:bold;
-    margin-bottom:18px;
+    margin-bottom:20px;
 }
 
-.botao{
-    display:block;
+.buy{
     width:100%;
-    text-align:center;
+    padding:16px;
+    border:none;
     background:#22c55e;
     color:white;
-    text-decoration:none;
-    padding:14px;
     border-radius:12px;
+    font-size:18px;
     font-weight:bold;
-    transition:0.3s;
+    cursor:pointer;
 }
 
-.botao:hover{
-    background:#16a34a;
+/* MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.8);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+    padding:20px;
 }
 
-/* FOOTER */
-
-footer{
-    text-align:center;
-    padding:35px;
-    color:#94a3b8;
+.modal-content{
     background:#0f172a;
-    margin-top:30px;
+    border-radius:25px;
+    max-width:500px;
+    width:100%;
+    overflow:hidden;
+    animation:show .3s;
 }
 
-/* RESPONSIVO */
+@keyframes show{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.modal img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    background:white;
+}
+
+.modal-info{
+    padding:30px;
+}
+
+.modal-info h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.modal-info p{
+    color:#ddd;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:25px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+}
 
 @media(max-width:768px){
 
-header h1{
+.hero h1{
     font-size:42px;
 }
 
-header p{
-    font-size:17px;
+.hero p{
+    font-size:18px;
 }
 
-.card img{
-    height:320px;
+.story{
+    margin:40px 20px;
 }
 
 }
@@ -163,23 +308,24 @@ header p{
 
 <body>
 
-<header>
+<section class="hero">
 
 <h1>AlbaMix Sports</h1>
 
 <p>
 Camisas importadas premium para apaixonados por futebol.
+Qualidade, estilo e paixão em cada detalhe.
 </p>
 
-<div class="social">
+<div class="buttons">
 
-<a class="whatsapp"
-href="https://wa.me/5531999999999"
+<a class="btn whatsapp"
+href="https://wa.me/5531992315056"
 target="_blank">
 WhatsApp
 </a>
 
-<a class="instagram"
+<a class="btn instagram"
 href="https://instagram.com/albamixsports"
 target="_blank">
 Instagram
@@ -187,195 +333,270 @@ Instagram
 
 </div>
 
-</header>
+</section>
+
+<section class="story">
+
+<h2>Nossa História</h2>
+
+<p>
+A AlbaMix Sports nasceu da paixão pelo futebol e pelo desejo de entregar camisas premium para verdadeiros torcedores.
+Trabalhamos com modelos importados de alta qualidade, trazendo conforto, estilo e exclusividade para quem vive o esporte intensamente.
+Nossa missão é oferecer uma experiência diferenciada, com atendimento próximo e produtos que representam grandes clubes e seleções do mundo.
+</p>
+
+</section>
 
 <section class="catalogo">
 
+<h2>Catálogo Premium</h2>
+
+<div class="grid">
+
 <!-- BRASIL -->
 
-<div class="card">
+<div class="card" onclick="openModal(
+'Brasil 2026',
+'Brasil 2026.jpeg',
+'Camisa premium da Seleção Brasileira temporada 2026.',
+'R$ 219,90'
+)">
+
 <img src="Brasil 2026.jpeg">
 
 <div class="info">
-<h2>Brasil 2026</h2>
-<div class="preco">R$ 219,90</div>
-
-<a class="botao"
-href="https://wa.me/5531999999999"
-target="_blank">
-Comprar
-</a>
-
+<h3>Brasil 2026</h3>
+<div class="price">R$ 219,90</div>
+<button class="buy">Comprar</button>
 </div>
+
 </div>
 
 <!-- CRUZEIRO AZUL -->
 
-<div class="card">
+<div class="card" onclick="openModal(
+'Cruzeiro Azul 2026',
+'Cruzeiro Azul 2026.jpeg',
+'Modelo premium do Cruzeiro Azul temporada 2026.',
+'R$ 179,90'
+)">
+
 <img src="Cruzeiro Azul 2026.jpeg">
 
 <div class="info">
-<h2>Cruzeiro Azul 2026</h2>
-<div class="preco">R$ 179,90</div>
-
-<a class="botao"
-href="https://wa.me/5531999999999"
-target="_blank">
-Comprar
-</a>
-
+<h3>Cruzeiro Azul 2026</h3>
+<div class="price">R$ 179,90</div>
+<button class="buy">Comprar</button>
 </div>
+
 </div>
 
 <!-- CRUZEIRO BRANCA -->
 
-<div class="card">
+<div class="card" onclick="openModal(
+'Cruzeiro Branca 2026',
+'Cruzeiro Branca 2021.jpeg',
+'Camisa branca premium do Cruzeiro.',
+'R$ 179,90'
+)">
+
 <img src="Cruzeiro Branca 2021.jpeg">
 
 <div class="info">
-<h2>Cruzeiro Branca 2021</h2>
-<div class="preco">R$ 179,90</div>
-
-<a class="botao"
-href="https://wa.me/5531999999999"
-target="_blank">
-Comprar
-</a>
-
+<h3>Cruzeiro Branca 2026</h3>
+<div class="price">R$ 179,90</div>
+<button class="buy">Comprar</button>
 </div>
+
 </div>
 
 <!-- ATLÉTICO -->
 
-<div class="card">
+<div class="card" onclick="openModal(
+'Atlético Mineiro 2026',
+'Atlético Mineiro 2026.jpeg',
+'Modelo oficial premium Atlético Mineiro.',
+'R$ 179,90'
+)">
+
 <img src="Atlético Mineiro 2026.jpeg">
 
 <div class="info">
-<h2>Atlético Mineiro 2026</h2>
-<div class="preco">R$ 179,90</div>
-
-<a class="botao"
-href="https://wa.me/5531999999999"
-target="_blank">
-Comprar
-</a>
-
+<h3>Atlético Mineiro 2026</h3>
+<div class="price">R$ 179,90</div>
+<button class="buy">Comprar</button>
 </div>
+
 </div>
 
 <!-- ATLÉTICO BRANCA -->
 
-<div class="card">
-<img src="Atlético Mineiro Branca.jpeg">
+<div class="card" onclick="openModal(
+'Atlético Mineiro Branca',
+'Atlético Branca 2026.jpeg',
+'Modelo branco premium Atlético Mineiro.',
+'R$ 179,90'
+)">
+
+<img src="Atlético Branca 2026.jpeg">
 
 <div class="info">
-<h2>Atlético Mineiro Branca</h2>
-<div class="preco">R$ 179,90</div>
-
-<a class="botao"
-href="https://wa.me/5531999999999"
-target="_blank">
-Comprar
-</a>
-
+<h3>Atlético Mineiro Branca</h3>
+<div class="price">R$ 179,90</div>
+<button class="buy">Comprar</button>
 </div>
+
 </div>
 
 <!-- FLAMENGO -->
 
-<div class="card">
+<div class="card" onclick="openModal(
+'Flamengo 2026',
+'Flamengo 2026.jpeg',
+'Modelo premium Flamengo temporada 2026.',
+'R$ 179,90'
+)">
+
 <img src="Flamengo 2026.jpeg">
 
 <div class="info">
-<h2>Flamengo 2026</h2>
-<div class="preco">R$ 179,90</div>
-
-<a class="botao"
-href="https://wa.me/5531999999999"
-target="_blank">
-Comprar
-</a>
-
+<h3>Flamengo 2026</h3>
+<div class="price">R$ 179,90</div>
+<button class="buy">Comprar</button>
 </div>
+
 </div>
 
 <!-- FLAMENGO BRANCA -->
 
-<div class="card">
+<div class="card" onclick="openModal(
+'Flamengo Branca 2026',
+'Flamengo Branca 2026.jpeg',
+'Modelo branco premium Flamengo.',
+'R$ 179,90'
+)">
+
 <img src="Flamengo Branca 2026.jpeg">
 
 <div class="info">
-<h2>Flamengo Branca 2026</h2>
-<div class="preco">R$ 179,90</div>
-
-<a class="botao"
-href="https://wa.me/5531999999999"
-target="_blank">
-Comprar
-</a>
-
+<h3>Flamengo Branca 2026</h3>
+<div class="price">R$ 179,90</div>
+<button class="buy">Comprar</button>
 </div>
+
 </div>
 
 <!-- PSG -->
 
-<div class="card">
-<img src="Paris 2026.jpeg">
+<div class="card" onclick="openModal(
+'PSG 2026',
+'Psg 2026.jpeg',
+'Modelo premium PSG temporada 2026.',
+'R$ 179,90'
+)">
+
+<img src="Psg 2026.jpeg">
 
 <div class="info">
-<h2>PSG 2026</h2>
-<div class="preco">R$ 179,90</div>
-
-<a class="botao"
-href="https://wa.me/5531999999999"
-target="_blank">
-Comprar
-</a>
-
-</div>
+<h3>PSG 2026</h3>
+<div class="price">R$ 179,90</div>
+<button class="buy">Comprar</button>
 </div>
 
-<!-- REAL MADRID -->
-
-<div class="card">
-<img src="Real Madrid 2026.jpeg">
-
-<div class="info">
-<h2>Real Madrid 2026</h2>
-<div class="preco">R$ 179,90</div>
-
-<a class="botao"
-href="https://wa.me/5531999999999"
-target="_blank">
-Comprar
-</a>
-
-</div>
 </div>
 
 <!-- BAYERN -->
 
-<div class="card">
-<img src="Bayern de Munique.jpeg">
+<div class="card" onclick="openModal(
+'Bayern 2026',
+'Bayern 2026.jpeg',
+'Modelo premium Bayern de Munique.',
+'R$ 179,90'
+)">
+
+<img src="Bayern 2026.jpeg">
 
 <div class="info">
-<h2>Bayern de Munique 2026</h2>
-<div class="preco">R$ 179,90</div>
-
-<a class="botao"
-href="https://wa.me/5531999999999"
-target="_blank">
-Comprar
-</a>
+<h3>Bayern 2026</h3>
+<div class="price">R$ 179,90</div>
+<button class="buy">Comprar</button>
+</div>
 
 </div>
+
+<!-- REAL MADRID -->
+
+<div class="card" onclick="openModal(
+'Real Madrid 2026',
+'Real Madrid 2026.jpeg',
+'Modelo premium Real Madrid.',
+'R$ 179,90'
+)">
+
+<img src="Real Madrid 2026.jpeg">
+
+<div class="info">
+<h3>Real Madrid 2026</h3>
+<div class="price">R$ 179,90</div>
+<button class="buy">Comprar</button>
+</div>
+
+</div>
+
 </div>
 
 </section>
 
-<footer>
-© 2026 AlbaMix Sports - Todos os direitos reservados.
-</footer>
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+<span class="close" onclick="closeModal()">&times;</span>
+
+<div class="modal-content">
+
+<img id="modal-img">
+
+<div class="modal-info">
+
+<h2 id="modal-title"></h2>
+
+<p id="modal-desc"></p>
+
+<div class="price" id="modal-price"></div>
+
+<a class="btn whatsapp"
+href="https://wa.me/5531992315056"
+target="_blank">
+Comprar no WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function openModal(title,image,desc,price){
+
+document.getElementById('modal').style.display='flex';
+
+document.getElementById('modal-title').innerText=title;
+document.getElementById('modal-img').src=image;
+document.getElementById('modal-desc').innerText=desc;
+document.getElementById('modal-price').innerText=price;
+
+}
+
+function closeModal(){
+
+document.getElementById('modal').style.display='none';
+
+}
+
+</script>
 
 </body>
 </html>
