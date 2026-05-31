@@ -7,7 +7,7 @@
 
 <title>AlbaMix Sports</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,11 +16,11 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:
-radial-gradient(circle at top,#11204b 0%,#060b18 45%,#02040b 100%);
+background:#050816;
 color:white;
 overflow-x:hidden;
 }
@@ -28,51 +28,101 @@ overflow-x:hidden;
 /* TOPO */
 
 .topbar{
-background:linear-gradient(90deg,#00ff88,#00d26a);
+background:#00ff88;
 color:#000;
 text-align:center;
 padding:12px;
-font-weight:700;
 font-size:14px;
+font-weight:700;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:22px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.4);
+backdrop-filter:blur(12px);
+z-index:999;
+border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.logo{
+font-size:34px;
+font-weight:900;
+color:#00ff88;
+}
+
+.menu{
+display:flex;
+gap:28px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#00ff88;
 }
 
 /* HERO */
 
 .hero{
-padding:90px 20px 70px;
-text-align:center;
+height:100vh;
+display:flex;
+align-items:center;
+padding:0 7%;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.82)),
+url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1600');
+background-size:cover;
+background-position:center;
 position:relative;
-overflow:hidden;
 }
 
 .hero::before{
 content:'';
 position:absolute;
-width:550px;
-height:550px;
+width:600px;
+height:600px;
 background:#00ff88;
 filter:blur(180px);
-opacity:0.12;
-top:-220px;
-left:50%;
-transform:translateX(-50%);
+opacity:.12;
+right:-200px;
+top:-100px;
+}
+
+.hero-content{
+max-width:850px;
+position:relative;
+z-index:2;
 }
 
 .badge{
 display:inline-block;
-padding:12px 24px;
-background:#00d26a;
+background:#00ff88;
 color:#000;
-border-radius:40px;
-font-weight:700;
+padding:10px 20px;
+border-radius:50px;
 font-size:14px;
+font-weight:800;
 margin-bottom:25px;
 }
 
 .hero h1{
-font-size:75px;
-font-weight:800;
+font-size:90px;
 line-height:1;
+font-weight:900;
 margin-bottom:25px;
 }
 
@@ -81,136 +131,157 @@ color:#00ff88;
 }
 
 .hero p{
-max-width:900px;
-margin:auto;
 font-size:24px;
 line-height:1.8;
-color:#dadada;
+color:#d8d8d8;
+margin-bottom:40px;
+max-width:700px;
 }
 
-.buttons{
-margin-top:35px;
+.hero-buttons{
 display:flex;
-justify-content:center;
 gap:18px;
 flex-wrap:wrap;
 }
 
-.btn{
-padding:16px 38px;
+.hero-buttons a{
+padding:18px 36px;
 border-radius:14px;
-font-weight:700;
 text-decoration:none;
-transition:0.3s;
-font-size:16px;
+font-weight:700;
+transition:.3s;
 }
 
-.btn-whats{
+.btn-primary{
 background:linear-gradient(90deg,#00ff88,#00d26a);
 color:#000;
 }
 
-.btn-insta{
-background:linear-gradient(90deg,#ff00b7,#ff5fd0);
+.btn-secondary{
+border:1px solid rgba(255,255,255,.2);
 color:white;
 }
 
-.btn:hover{
-transform:translateY(-5px) scale(1.03);
+.hero-buttons a:hover{
+transform:translateY(-4px);
 }
 
 /* BENEFÍCIOS */
 
 .benefits{
+padding:80px 7%;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
-padding:20px 7%;
-margin-top:20px;
 }
 
 .benefit{
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
+background:#0d1635;
 padding:35px;
 border-radius:24px;
-transition:0.3s;
-text-align:center;
+border:1px solid rgba(255,255,255,.05);
+transition:.3s;
 }
 
 .benefit:hover{
 transform:translateY(-8px);
 border-color:#00ff88;
-box-shadow:0 0 30px rgba(0,255,136,0.2);
+box-shadow:0 0 35px rgba(0,255,136,.15);
 }
 
 .benefit h3{
-font-size:28px;
-margin-top:15px;
+font-size:26px;
+margin:18px 0;
 color:#00ff88;
 }
 
 .benefit p{
-margin-top:12px;
 line-height:1.7;
-color:#d7d7d7;
+color:#cfcfcf;
 }
 
 /* HISTÓRIA */
 
 .historia{
-padding:110px 8%;
+padding:100px 7%;
 text-align:center;
 }
 
 .historia h2{
 font-size:64px;
-margin-bottom:35px;
-font-weight:800;
+margin-bottom:30px;
+font-weight:900;
 }
 
 .historia p{
+font-size:22px;
+line-height:2;
 max-width:1100px;
 margin:auto;
-font-size:24px;
-line-height:2;
-color:#e5e5e5;
+color:#ddd;
 }
 
 /* CATÁLOGO */
 
 .catalogo{
-padding:20px 6% 120px;
+padding:30px 7% 120px;
 }
 
-.catalogo h2{
-text-align:center;
-font-size:64px;
-margin-bottom:60px;
-font-weight:800;
+.catalogo-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:50px;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.catalogo-top h2{
+font-size:60px;
+font-weight:900;
+}
+
+.filtros{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.filtros button{
+padding:12px 22px;
+border:none;
+border-radius:40px;
+background:#101c3f;
+color:white;
+cursor:pointer;
+font-weight:700;
+transition:.3s;
+}
+
+.filtros button:hover{
+background:#00ff88;
+color:#000;
 }
 
 .produtos{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:35px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
 .produto{
-background:#0a1430;
+background:#0d1635;
 border-radius:24px;
 overflow:hidden;
-transition:0.35s;
-border:1px solid rgba(255,255,255,0.05);
-box-shadow:0 0 25px rgba(0,0,0,0.4);
+transition:.35s;
 position:relative;
+border:1px solid rgba(255,255,255,.05);
 }
 
 .produto:hover{
-transform:translateY(-10px) scale(1.02);
+transform:translateY(-10px);
 border-color:#00ff88;
-box-shadow:0 0 35px rgba(0,255,136,0.25);
+box-shadow:0 0 35px rgba(0,255,136,.18);
 }
 
 .selo{
@@ -221,64 +292,69 @@ background:#00ff88;
 color:#000;
 padding:8px 16px;
 border-radius:40px;
-font-weight:800;
-font-size:13px;
-z-index:2;
+font-size:12px;
+font-weight:900;
+z-index:3;
 }
 
 .produto img{
 width:100%;
-height:390px;
+height:320px;
 object-fit:cover;
 background:white;
+transition:.4s;
+}
+
+.produto:hover img{
+transform:scale(1.04);
 }
 
 .info{
-padding:28px;
+padding:22px;
 }
 
 .info h3{
-font-size:34px;
-margin-bottom:15px;
+font-size:28px;
+margin-bottom:12px;
 }
 
 .tamanhos{
 display:flex;
 gap:10px;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
 .tamanho{
-border:1px solid rgba(255,255,255,0.25);
+border:1px solid rgba(255,255,255,.2);
 padding:7px 14px;
 border-radius:8px;
-font-size:14px;
+font-size:13px;
 }
 
 .preco{
-font-size:42px;
-font-weight:800;
+font-size:36px;
+font-weight:900;
 color:#00ff88;
-margin-bottom:10px;
 }
 
 .parcelamento{
-font-size:16px;
-color:#d7d7d7;
-margin-bottom:24px;
+margin-top:8px;
+margin-bottom:20px;
+color:#ccc;
+font-size:14px;
 line-height:1.6;
 }
 
 .btn-comprar{
 width:100%;
-padding:18px;
+padding:16px;
 border:none;
 border-radius:14px;
 background:linear-gradient(90deg,#00ff88,#00d26a);
+font-size:16px;
 font-weight:800;
-font-size:18px;
 cursor:pointer;
-transition:0.3s;
+transition:.3s;
 }
 
 .btn-comprar:hover{
@@ -292,12 +368,12 @@ position:fixed;
 right:20px;
 bottom:20px;
 width:350px;
-background:#081327;
-border:1px solid rgba(255,255,255,0.08);
+background:#0a1330;
+border:1px solid rgba(255,255,255,.08);
 border-radius:24px;
 padding:25px;
 z-index:999;
-box-shadow:0 0 35px rgba(0,0,0,0.5);
+box-shadow:0 0 35px rgba(0,0,0,.5);
 backdrop-filter:blur(10px);
 }
 
@@ -308,14 +384,14 @@ margin-bottom:20px;
 
 .itemCarrinho{
 padding:12px 0;
-border-bottom:1px solid rgba(255,255,255,0.08);
+border-bottom:1px solid rgba(255,255,255,.08);
 line-height:1.7;
 }
 
 #total{
 margin-top:20px;
 font-size:30px;
-font-weight:800;
+font-weight:900;
 color:#00ff88;
 }
 
@@ -326,10 +402,10 @@ padding:18px;
 border:none;
 border-radius:14px;
 background:linear-gradient(90deg,#00ff88,#00d26a);
-font-weight:800;
+font-weight:900;
 font-size:18px;
 cursor:pointer;
-transition:0.3s;
+transition:.3s;
 }
 
 #finalizar:hover{
@@ -339,23 +415,36 @@ transform:scale(1.03);
 /* FOOTER */
 
 footer{
-background:#030610;
-padding:45px 20px;
+padding:60px 20px;
 text-align:center;
-border-top:1px solid rgba(255,255,255,0.08);
+background:#030611;
+border-top:1px solid rgba(255,255,255,.05);
 }
 
 footer p{
+line-height:1.9;
 color:#aaa;
-line-height:1.8;
 }
 
 /* RESPONSIVO */
 
 @media(max-width:768px){
 
+header{
+padding:18px 5%;
+}
+
+.menu{
+display:none;
+}
+
+.hero{
+padding:120px 5% 80px;
+height:auto;
+}
+
 .hero h1{
-font-size:48px;
+font-size:52px;
 }
 
 .hero p{
@@ -363,7 +452,7 @@ font-size:18px;
 }
 
 .historia h2,
-.catalogo h2{
+.catalogo-top h2{
 font-size:42px;
 }
 
@@ -373,7 +462,7 @@ line-height:1.8;
 }
 
 .produto img{
-height:300px;
+height:290px;
 }
 
 #carrinho{
@@ -393,31 +482,52 @@ bottom:15px;
 🚚 Frete para todo Brasil • 💳 Parcelamento em até 3x • 🔥 Camisas Premium
 </div>
 
+<header>
+
+<div class="logo">
+AlbaMix Sports
+</div>
+
+<nav class="menu">
+<a href="#">Início</a>
+<a href="#catalogo">Catálogo</a>
+<a href="#historia">Nossa História</a>
+</nav>
+
+</header>
+
 <section class="hero">
 
+<div class="hero-content">
+
 <div class="badge">
-⚽ CAMISAS IMPORTADAS PREMIUM
+⚽ NOVA COLEÇÃO 2026
 </div>
 
 <h1>
-Seja Bem-vindo à<br>
-<span>AlbaMix Sports</span>
+AS CAMISAS MAIS<br>
+<span>DESEJADAS</span><br>
+DO FUTEBOL
 </h1>
 
 <p>
-As camisas mais desejadas do futebol mundial.
-Qualidade premium, exclusividade e estilo para verdadeiros apaixonados pelo esporte.
+Modelos premium importados com qualidade diferenciada,
+visual moderno e exclusividade para verdadeiros apaixonados pelo esporte.
 </p>
 
-<div class="buttons">
+<div class="hero-buttons">
 
-<a href="https://wa.me/55SEUNUMEROAQUI" class="btn btn-whats">
-WhatsApp
+<a href="#catalogo" class="btn-primary">
+Ver Catálogo
 </a>
 
-<a href="https://instagram.com/SEUINSTAGRAM" class="btn btn-insta">
+<a href="https://instagram.com/albamixsports"
+target="_blank"
+class="btn-secondary">
 Instagram
 </a>
+
+</div>
 
 </div>
 
@@ -432,40 +542,54 @@ Instagram
 
 <div class="benefit">
 <h3>💳 Parcelamento</h3>
-<p>Parcele em até 3x com juros da maquininha.</p>
+<p>Parcele suas compras em até 3x com juros da maquininha.</p>
 </div>
 
 <div class="benefit">
 <h3>🏆 Qualidade Premium</h3>
-<p>Camisas importadas com excelente acabamento premium.</p>
+<p>Camisas importadas com acabamento premium e excelente qualidade.</p>
 </div>
 
 <div class="benefit">
-<h3>🔥 Modelos Exclusivos</h3>
-<p>Os lançamentos mais desejados do futebol mundial.</p>
+<h3>🔥 Lançamentos</h3>
+<p>Os modelos mais desejados da temporada 2026.</p>
 </div>
 
 </section>
 
-<section class="historia">
+<section class="historia" id="historia">
 
 <h2>Nossa História</h2>
 
 <p>
-A AlbaMix Sports nasceu da paixão pelo futebol e do desejo de entregar camisas premium para verdadeiros torcedores. Trabalhamos com modelos importados de alta qualidade, trazendo conforto, estilo e exclusividade para quem vive o esporte intensamente.
+A AlbaMix Sports nasceu da paixão pelo futebol e do desejo de entregar camisas premium para verdadeiros torcedores.
+Trabalhamos com modelos importados de alta qualidade, trazendo conforto, estilo e exclusividade para quem vive o esporte intensamente.
 </p>
 
 </section>
 
-<section class="catalogo">
+<section class="catalogo" id="catalogo">
+
+<div class="catalogo-top">
 
 <h2>Catálogo Premium</h2>
+
+<div class="filtros">
+<button>Lançamentos</button>
+<button>Seleções</button>
+<button>Europeus</button>
+<button>Brasileiros</button>
+</div>
+
+</div>
 
 <div class="produtos">
 
 <!-- BRASIL -->
 <div class="produto">
+
 <div class="selo">NOVO</div>
+
 <img src="Brasil 2026.jpeg">
 
 <div class="info">
@@ -495,7 +619,9 @@ Adicionar ao Carrinho
 
 <!-- CRUZEIRO -->
 <div class="produto">
+
 <div class="selo">NOVO</div>
+
 <img src="Cruzeiro Azul 2026.jpeg">
 
 <div class="info">
@@ -525,7 +651,9 @@ Adicionar ao Carrinho
 
 <!-- FLAMENGO -->
 <div class="produto">
+
 <div class="selo">NOVO</div>
+
 <img src="Flamengo 2026.jpeg">
 
 <div class="info">
@@ -555,7 +683,9 @@ Adicionar ao Carrinho
 
 <!-- PSG -->
 <div class="produto">
+
 <div class="selo">NOVO</div>
+
 <img src="Psg 2026.jpeg">
 
 <div class="info">
@@ -585,7 +715,9 @@ Adicionar ao Carrinho
 
 <!-- REAL -->
 <div class="produto">
+
 <div class="selo">NOVO</div>
+
 <img src="Real Madrid 2026.jpeg">
 
 <div class="info">
@@ -615,7 +747,9 @@ Adicionar ao Carrinho
 
 <!-- BAYERN -->
 <div class="produto">
+
 <div class="selo">NOVO</div>
+
 <img src="Bayern 2026.jpeg">
 
 <div class="info">
@@ -644,6 +778,7 @@ Adicionar ao Carrinho
 </div>
 
 </div>
+
 </section>
 
 <!-- CARRINHO -->
@@ -658,7 +793,8 @@ Adicionar ao Carrinho
 Total: R$ 0,00
 </div>
 
-<button id="finalizar" onclick="finalizarPedido()">
+<button id="finalizar"
+onclick="finalizarPedido()">
 Finalizar no WhatsApp
 </button>
 
@@ -669,7 +805,7 @@ Finalizar no WhatsApp
 <p>
 © 2026 AlbaMix Sports — Todos os direitos reservados.
 <br><br>
-⚽ Camisas importadas premium para apaixonados por futebol.
+⚽ Camisas premium importadas para apaixonados por futebol.
 </p>
 
 </footer>
@@ -691,7 +827,8 @@ atualizarCarrinho();
 
 function atualizarCarrinho(){
 
-let itens = document.getElementById("itensCarrinho");
+let itens =
+document.getElementById("itensCarrinho");
 
 itens.innerHTML = "";
 
