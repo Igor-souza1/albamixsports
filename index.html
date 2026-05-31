@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
 <title>AlbaMix Sports</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -15,39 +17,49 @@
 }
 
 body{
-    background:#0f172a;
+    background:#081221;
     color:white;
 }
 
+/* HEADER */
+
 header{
-    background:#111827;
-    padding:20px;
+    background:linear-gradient(135deg,#0f172a,#111827);
+    padding:50px 20px;
     text-align:center;
-    box-shadow:0 0 10px rgba(0,0,0,0.5);
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
 }
 
 header h1{
+    font-size:55px;
     color:#22c55e;
-    font-size:38px;
+    margin-bottom:10px;
 }
 
 header p{
-    margin-top:8px;
     color:#cbd5e1;
+    font-size:20px;
+    margin-bottom:25px;
 }
 
 .social{
-    margin-top:15px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
 .social a{
     text-decoration:none;
     color:white;
-    margin:0 10px;
-    padding:12px 20px;
-    border-radius:10px;
+    padding:15px 30px;
+    border-radius:12px;
     font-weight:bold;
-    display:inline-block;
+    transition:0.3s;
+}
+
+.social a:hover{
+    transform:scale(1.05);
 }
 
 .whatsapp{
@@ -58,45 +70,47 @@ header p{
     background:#e1306c;
 }
 
+/* CATÁLOGO */
+
 .catalogo{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    padding:30px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    padding:40px 25px;
 }
 
 .card{
-    background:#1e293b;
-    border-radius:18px;
+    background:#111827;
+    border-radius:20px;
     overflow:hidden;
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
     transition:0.3s;
-    box-shadow:0 0 15px rgba(0,0,0,0.4);
 }
 
 .card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-8px);
 }
 
 .card img{
     width:100%;
-    height:320px;
+    height:360px;
     object-fit:cover;
 }
 
 .info{
-    padding:18px;
+    padding:20px;
 }
 
 .info h2{
-    font-size:20px;
-    margin-bottom:10px;
+    font-size:24px;
+    margin-bottom:12px;
 }
 
 .preco{
     color:#22c55e;
-    font-size:24px;
+    font-size:30px;
     font-weight:bold;
-    margin-bottom:15px;
+    margin-bottom:18px;
 }
 
 .botao{
@@ -106,132 +120,261 @@ header p{
     background:#22c55e;
     color:white;
     text-decoration:none;
-    padding:12px;
-    border-radius:10px;
+    padding:14px;
+    border-radius:12px;
     font-weight:bold;
+    transition:0.3s;
 }
+
+.botao:hover{
+    background:#16a34a;
+}
+
+/* FOOTER */
 
 footer{
     text-align:center;
-    padding:25px;
+    padding:35px;
     color:#94a3b8;
+    background:#0f172a;
+    margin-top:30px;
 }
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+header h1{
+    font-size:42px;
+}
+
+header p{
+    font-size:17px;
+}
+
+.card img{
+    height:320px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>AlbaMix Sports</h1>
-    <p>Camisas importadas premium para apaixonados por futebol.</p>
 
-    <div class="social">
-        <a class="whatsapp" href="https://wa.me/5531999999999" target="_blank">
-            WhatsApp
-        </a>
+<h1>AlbaMix Sports</h1>
 
-        <a class="instagram" href="https://instagram.com/albamixsports" target="_blank">
-            Instagram
-        </a>
-    </div>
+<p>
+Camisas importadas premium para apaixonados por futebol.
+</p>
+
+<div class="social">
+
+<a class="whatsapp"
+href="https://wa.me/5531999999999"
+target="_blank">
+WhatsApp
+</a>
+
+<a class="instagram"
+href="https://instagram.com/albamixsports"
+target="_blank">
+Instagram
+</a>
+
+</div>
+
 </header>
 
 <section class="catalogo">
 
-<div class="card">
-    <img src="https://i.imgur.com/jXhN6vM.jpg">
-    <div class="info">
-        <h2>Brasil 2026</h2>
-        <div class="preco">R$ 219,90</div>
-        <a class="botao" href="https://wa.me/5531999999999" target="_blank">Comprar</a>
-    </div>
-</div>
+<!-- BRASIL -->
 
 <div class="card">
-    <img src="https://i.imgur.com/uN7mYVB.jpg">
-    <div class="info">
-        <h2>Cruzeiro Azul 2026</h2>
-        <div class="preco">R$ 179,90</div>
-        <a class="botao" href="https://wa.me/5531999999999" target="_blank">Comprar</a>
-    </div>
+<img src="Brasil 2026.jpeg">
+
+<div class="info">
+<h2>Brasil 2026</h2>
+<div class="preco">R$ 219,90</div>
+
+<a class="botao"
+href="https://wa.me/5531999999999"
+target="_blank">
+Comprar
+</a>
+
+</div>
 </div>
 
-<div class="card">
-    <img src="https://i.imgur.com/If4xY6x.jpg">
-    <div class="info">
-        <h2>Cruzeiro Branca 2021</h2>
-        <div class="preco">R$ 179,90</div>
-        <a class="botao" href="https://wa.me/5531999999999" target="_blank">Comprar</a>
-    </div>
-</div>
+<!-- CRUZEIRO AZUL -->
 
 <div class="card">
-    <img src="https://i.imgur.com/B1j3n4m.jpg">
-    <div class="info">
-        <h2>Atlético Mineiro 2026</h2>
-        <div class="preco">R$ 179,90</div>
-        <a class="botao" href="https://wa.me/5531999999999" target="_blank">Comprar</a>
-    </div>
+<img src="Cruzeiro Azul 2026.jpeg">
+
+<div class="info">
+<h2>Cruzeiro Azul 2026</h2>
+<div class="preco">R$ 179,90</div>
+
+<a class="botao"
+href="https://wa.me/5531999999999"
+target="_blank">
+Comprar
+</a>
+
+</div>
 </div>
 
-<div class="card">
-    <img src="https://i.imgur.com/Uv7d9l6.jpg">
-    <div class="info">
-        <h2>Atlético Mineiro Branca</h2>
-        <div class="preco">R$ 179,90</div>
-        <a class="botao" href="https://wa.me/5531999999999" target="_blank">Comprar</a>
-    </div>
-</div>
+<!-- CRUZEIRO BRANCA -->
 
 <div class="card">
-    <img src="https://i.imgur.com/JVwL0q8.jpg">
-    <div class="info">
-        <h2>Flamengo Vermelha 2026</h2>
-        <div class="preco">R$ 179,90</div>
-        <a class="botao" href="https://wa.me/5531999999999" target="_blank">Comprar</a>
-    </div>
+<img src="Cruzeiro Branca 2021.jpeg">
+
+<div class="info">
+<h2>Cruzeiro Branca 2021</h2>
+<div class="preco">R$ 179,90</div>
+
+<a class="botao"
+href="https://wa.me/5531999999999"
+target="_blank">
+Comprar
+</a>
+
+</div>
 </div>
 
-<div class="card">
-    <img src="https://i.imgur.com/r7KQ9sG.jpg">
-    <div class="info">
-        <h2>Flamengo Branca 2026</h2>
-        <div class="preco">R$ 179,90</div>
-        <a class="botao" href="https://wa.me/5531999999999" target="_blank">Comprar</a>
-    </div>
-</div>
+<!-- ATLÉTICO -->
 
 <div class="card">
-    <img src="https://i.imgur.com/FyM2Q6s.jpg">
-    <div class="info">
-        <h2>PSG 2026</h2>
-        <div class="preco">R$ 179,90</div>
-        <a class="botao" href="https://wa.me/5531999999999" target="_blank">Comprar</a>
-    </div>
+<img src="Atlético Mineiro 2026.jpeg">
+
+<div class="info">
+<h2>Atlético Mineiro 2026</h2>
+<div class="preco">R$ 179,90</div>
+
+<a class="botao"
+href="https://wa.me/5531999999999"
+target="_blank">
+Comprar
+</a>
+
+</div>
 </div>
 
-<div class="card">
-    <img src="https://i.imgur.com/X4ZQ0vI.jpg">
-    <div class="info">
-        <h2>Real Madrid 2026</h2>
-        <div class="preco">R$ 179,90</div>
-        <a class="botao" href="https://wa.me/5531999999999" target="_blank">Comprar</a>
-    </div>
-</div>
+<!-- ATLÉTICO BRANCA -->
 
 <div class="card">
-    <img src="https://i.imgur.com/l4h3sD8.jpg">
-    <div class="info">
-        <h2>Bayern 2026</h2>
-        <div class="preco">R$ 179,90</div>
-        <a class="botao" href="https://wa.me/5531999999999" target="_blank">Comprar</a>
-    </div>
+<img src="Atlético Mineiro Branca.jpeg">
+
+<div class="info">
+<h2>Atlético Mineiro Branca</h2>
+<div class="preco">R$ 179,90</div>
+
+<a class="botao"
+href="https://wa.me/5531999999999"
+target="_blank">
+Comprar
+</a>
+
+</div>
+</div>
+
+<!-- FLAMENGO -->
+
+<div class="card">
+<img src="Flamengo 2026.jpeg">
+
+<div class="info">
+<h2>Flamengo 2026</h2>
+<div class="preco">R$ 179,90</div>
+
+<a class="botao"
+href="https://wa.me/5531999999999"
+target="_blank">
+Comprar
+</a>
+
+</div>
+</div>
+
+<!-- FLAMENGO BRANCA -->
+
+<div class="card">
+<img src="Flamengo Branca 2026.jpeg">
+
+<div class="info">
+<h2>Flamengo Branca 2026</h2>
+<div class="preco">R$ 179,90</div>
+
+<a class="botao"
+href="https://wa.me/5531999999999"
+target="_blank">
+Comprar
+</a>
+
+</div>
+</div>
+
+<!-- PSG -->
+
+<div class="card">
+<img src="Paris 2026.jpeg">
+
+<div class="info">
+<h2>PSG 2026</h2>
+<div class="preco">R$ 179,90</div>
+
+<a class="botao"
+href="https://wa.me/5531999999999"
+target="_blank">
+Comprar
+</a>
+
+</div>
+</div>
+
+<!-- REAL MADRID -->
+
+<div class="card">
+<img src="Real Madrid 2026.jpeg">
+
+<div class="info">
+<h2>Real Madrid 2026</h2>
+<div class="preco">R$ 179,90</div>
+
+<a class="botao"
+href="https://wa.me/5531999999999"
+target="_blank">
+Comprar
+</a>
+
+</div>
+</div>
+
+<!-- BAYERN -->
+
+<div class="card">
+<img src="Bayern de Munique.jpeg">
+
+<div class="info">
+<h2>Bayern de Munique 2026</h2>
+<div class="preco">R$ 179,90</div>
+
+<a class="botao"
+href="https://wa.me/5531999999999"
+target="_blank">
+Comprar
+</a>
+
+</div>
 </div>
 
 </section>
 
 <footer>
-    © 2026 AlbaMix Sports - Todos os direitos reservados.
+© 2026 AlbaMix Sports - Todos os direitos reservados.
 </footer>
 
 </body>
